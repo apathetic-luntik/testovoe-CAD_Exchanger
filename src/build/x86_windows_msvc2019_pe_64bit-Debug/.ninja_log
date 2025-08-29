@@ -1,0 +1,23 @@
+# ninja log v5
+0	1167	7780843983417549	CMakeFiles/testovoe.dir/main.cpp.obj	c8ecaf578ff42987
+1170	1612	7780843987621038	testovoe.exe	fe83a2162aae0ac8
+9	1217	7781561566988539	curves/CMakeFiles/curves.dir/Circle.cpp.obj	29290964aee8e0ba
+29	1221	7781561567008554	curves/CMakeFiles/curves.dir/Spiral.cpp.obj	5b12d77a67f8f1c3
+21	1222	7781561566998531	curves/CMakeFiles/curves.dir/Ellipse.cpp.obj	97103f354aefc981
+1223	1350	7781561568288582	curves/curves.lib	2c0e0d48d1f70d24
+1	1616	7781561571052102	CMakeFiles/testovoe.dir/main.cpp.obj	cea81105ede87a96
+1617	2099	7781561574632985	testovoe.exe	34ec352a7a8a2dde
+2	2625	7781776845522911	CMakeFiles/testovoe.dir/main.cpp.obj	cea81105ede87a96
+2629	3469	7781776852652846	testovoe.exe	34ec352a7a8a2dde
+2	3384	7781781291341870	CMakeFiles/testovoe.dir/main.cpp.obj	cea81105ede87a96
+3386	4057	7781781296701840	testovoe.exe	34ec352a7a8a2dde
+3	3263	7781789845334198	CMakeFiles/testovoe.dir/main.cpp.obj	cea81105ede87a96
+3265	3772	7781789849644190	testovoe.exe	34ec352a7a8a2dde
+2	5000	7781794529312805	CMakeFiles/testovoe.dir/main.cpp.obj	cea81105ede87a96
+5003	5960	7781794537772824	testovoe.exe	34ec352a7a8a2dde
+136	5589	7781799065505676	curves/CMakeFiles/curves.dir/Circle.cpp.obj	29290964aee8e0ba
+144	5591	7781799065625686	curves/CMakeFiles/curves.dir/Ellipse.cpp.obj	97103f354aefc981
+153	5603	7781799065815685	curves/CMakeFiles/curves.dir/Spiral.cpp.obj	5b12d77a67f8f1c3
+5604	6244	7781799070755682	curves/curves.lib	2c0e0d48d1f70d24
+2	9036	7781799100225688	CMakeFiles/testovoe.dir/main.cpp.obj	cea81105ede87a96
+9037	9755	7781799106255730	testovoe.exe	34ec352a7a8a2dde

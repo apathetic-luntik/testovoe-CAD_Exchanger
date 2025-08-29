@@ -1,0 +1,89 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-c4296ab6f00bdde755cc.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "curves",
+					"jsonFile" : "directory-curves-Debug-e87c5beb4495d475aeca.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "curves",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "testovoe",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "curves::@51cd3697a71b5aa1b872",
+					"jsonFile" : "target-curves-Debug-67e92936015b4d7ebb30.json",
+					"name" : "curves",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "testovoe::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-testovoe-Debug-0fa5ba3130f29e964553.json",
+					"name" : "testovoe",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/Admin/Documents/allTestovoe/testovoe-CAD_Exchanger/testovoe/build/x86_windows_msvc2019_pe_64bit-Debug",
+		"source" : "C:/Users/Admin/Documents/allTestovoe/testovoe-CAD_Exchanger/testovoe"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}
