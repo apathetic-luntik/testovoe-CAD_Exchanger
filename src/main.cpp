@@ -1,8 +1,10 @@
+#define _USE_MATH_DEFINES
 #include <iostream>
 #include <vector>
 #include <memory>
 #include <random>
 #include <ctime>
+#include <cmath>
 
 #include "curves/Circle.h"
 #include "curves/Ellipse.h"
@@ -51,8 +53,9 @@ int main()
     for (size_t i = 0; i < curves.size(); ++i) {
         std::cout << "Curve " << i + 1 << " (" << curves[i]->getType() << "): ";
         
-        Point3D point = curves[i]->getPoint(0);
-        Point3D derivative = curves[i]->getDerivative(0);
+        double t = M_PI / 4.0;
+        Point3D point = curves[i]->getPoint(t);
+        Point3D derivative = curves[i]->getDerivative(t);
         
         std::cout << "point(" << point.x << ", " << point.y << ", " << point.z << "), ";
         std::cout << "derivative(" << derivative.x << ", " << derivative.y << ", " << derivative.z << ")" << std::endl;
