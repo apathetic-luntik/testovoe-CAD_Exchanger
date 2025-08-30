@@ -5,6 +5,7 @@
 #include <random>
 #include <ctime>
 #include <cmath>
+#include <algorithm>
 
 #include "curves/Circle.h"
 #include "curves/Ellipse.h"
@@ -37,9 +38,7 @@ std::shared_ptr<CurveBase> createRandomCurve() {
 }
 
 int main()
-{
-    std::cout << "Creating container with random curves..." << std::endl;
-      
+{      
     std::vector<std::shared_ptr<CurveBase>> curves;
     
     const int numCurves = 10;
@@ -60,9 +59,7 @@ int main()
         std::cout << "derivative(" << derivative.x << ", " << derivative.y << ", " << derivative.z << ")" << std::endl;
     }
     
-    // 4. 
-    std::cout << "\nCreating second container with circles only..." << std::endl;
-    
+    //4.
     std::vector<std::shared_ptr<Circle>> circles;
     for (const auto& curve : curves) {
         // Преобразование указателя на базовый класс в указатель на Circle
@@ -71,22 +68,21 @@ int main()
         // Если преобразование успешно (объект действительно является окружностью)
         if (circle_ptr != nullptr) {
             circles.push_back(circle_ptr);
-            std::cout << "Added circle with radius: " << circle_ptr->getRadius() << std::endl;
         }
     }
     
-    std::cout << "Second container filled with " << circles.size() << " circles (not cloned - same objects)." << std::endl;
     
-    // Вывод кругов из во второго контейнере
+    // 5. 
+    std::sort(circles.begin(), circles.end(), 
+        [](const std::shared_ptr<Circle>& a, const std::shared_ptr<Circle>& b) {
+            return a->getRadius() < b->getRadius();
+        });
+    
+    
+    std::cout << "\nSorted circles (ascending order by radius):" << std::endl;
     for (size_t i = 0; i < circles.size(); ++i) {
         std::cout << "Circle " << i + 1 << ": radius = " << circles[i]->getRadius() << std::endl;
         
-        double t = M_PI / 4.0;
-        Point3D point = circles[i]->getPoint(t);
-        Point3D derivative = circles[i]->getDerivative(t);
-        
-        std::cout << "  point(" << point.x << ", " << point.y << ", " << point.z << "), ";
-        std::cout << "derivative(" << derivative.x << ", " << derivative.y << ", " << derivative.z << ")" << std::endl;
     }
     
   
