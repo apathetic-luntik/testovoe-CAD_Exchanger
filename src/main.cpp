@@ -61,6 +61,7 @@ int main()
     
     //4.
     std::vector<std::shared_ptr<Circle>> circles;
+     double total_radius_sum = 0.0;
     for (const auto& curve : curves) {
         // Преобразование указателя на базовый класс в указатель на Circle
         std::shared_ptr<Circle> circle_ptr = std::dynamic_pointer_cast<Circle>(curve);
@@ -68,9 +69,10 @@ int main()
         // Если преобразование успешно (объект действительно является окружностью)
         if (circle_ptr != nullptr) {
             circles.push_back(circle_ptr);
+            total_radius_sum += circle_ptr->getRadius();
         }
     }
-    
+   
     
     // 5. 
     std::sort(circles.begin(), circles.end(), 
@@ -82,9 +84,8 @@ int main()
     std::cout << "\nSorted circles (ascending order by radius):" << std::endl;
     for (size_t i = 0; i < circles.size(); ++i) {
         std::cout << "Circle " << i + 1 << ": radius = " << circles[i]->getRadius() << std::endl;
-        
     }
-    
+     std::cout << "\nTotal sum of radii in second container: " << total_radius_sum << std::endl;
   
     return 0;
 }
