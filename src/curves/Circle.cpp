@@ -8,7 +8,7 @@
 
 Circle::Circle(double radius) : radius(radius) {
     if (radius <= 0) {
-        throw std::invalid_argument("Радиус должен быть положительным числом");
+        throw std::invalid_argument("Radius must be a positive number");
     }
 }
 
@@ -30,4 +30,8 @@ Point3D Circle::getDerivative(double t) const {
 
 double Circle::getRadius() const {
     return radius;
+}
+
+std::string Circle::getType() const {
+    return "Circle";
 }

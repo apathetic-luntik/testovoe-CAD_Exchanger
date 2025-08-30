@@ -8,11 +8,11 @@
 
 Spiral::Spiral(double radius, double step) : radius(radius), step(step) {
     if (radius <= 0) {
-        throw std::invalid_argument("Радиус должен быть положительным числом");
+        throw std::invalid_argument("Radius must be a positive number");
     }
     
     if (step <= 0) {
-        throw std::invalid_argument("Шаг должен быть положительным числом");
+        throw std::invalid_argument("Step must be a positive number");
     }
 }
 
@@ -40,4 +40,8 @@ double Spiral::getRadius() const {
 
 double Spiral::getStep() const {
     return step;
+}
+
+std::string Spiral::getType() const {
+    return "Spiral";
 }

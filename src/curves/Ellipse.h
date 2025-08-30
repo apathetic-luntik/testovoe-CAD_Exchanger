@@ -14,6 +14,7 @@ public:
     
     Point3D getPoint(double t) const override;
     Point3D getDerivative(double t) const override;
+    std::string getType() const override;
     
     double getRadiusX() const;
     double getRadiusY() const;

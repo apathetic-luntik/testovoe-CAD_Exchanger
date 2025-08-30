@@ -8,7 +8,7 @@
 
 Ellipse::Ellipse(double radiusX, double radiusY) : radiusX(radiusX), radiusY(radiusY) {
     if (radiusX <= 0 || radiusY <= 0) {
-        throw std::invalid_argument("Радиусы должны быть положительными числами");
+        throw std::invalid_argument("Radii must be positive numbers");
     }
 }
 
@@ -34,4 +34,8 @@ double Ellipse::getRadiusX() const {
 
 double Ellipse::getRadiusY() const {
     return radiusY;
+}
+
+std::string Ellipse::getType() const {
+    return "Ellipse";
 }
